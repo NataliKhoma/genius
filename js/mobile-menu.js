@@ -9,5 +9,8 @@ const disableScroll = () =>
 menuBtnOpen.addEventListener("click", toggleMenu);
 menuBtnClose.addEventListener("click", toggleMenu);
 
-menuBtnOpen.addEventListener("click", disableScroll);
-menuBtnClose.addEventListener("click", disableScroll);
+mobileMenu.addEventListener("click", (event) => {
+  if (event.target.classList.contains("mobile-menu__link")) {
+    toggleMenu();
+  }
+});
